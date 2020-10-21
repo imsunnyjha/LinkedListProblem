@@ -8,7 +8,7 @@ namespace LinkedListOperation
     {
         internal Node head;
 
-        internal void AddNode(int data)
+        public void AppendNode(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -17,9 +17,12 @@ namespace LinkedListOperation
             }
             else
             {
-                Node temp = node;
-                temp.next = head;
-                head = temp;
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
             }
         }
         internal void Display()
