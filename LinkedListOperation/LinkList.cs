@@ -39,5 +39,38 @@ namespace LinkedListOperation
                 temp = temp.next;
             }
         }
+        internal Node InsertAtPosition(int position, int data)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine("Inavalid!");
+            }
+            if (position == 1)
+            {
+                var newNode = new Node(data);
+                newNode.next = head;
+                head = newNode;
+            }
+            else
+            {
+                while (position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.next = head.next;
+                        head.next = node;
+                        break;
+                    }
+                    head = head.next;
+                }
+                if (position != 1)
+                {
+                    Console.WriteLine("Out of Range!");
+                }
+            }
+            Console.WriteLine("Inserted value is: " +data);
+            return head;
+        }
     }
 }
