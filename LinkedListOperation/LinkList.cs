@@ -8,23 +8,19 @@ namespace LinkedListOperation
     {
         internal Node head;
 
-        internal void Add(int data)
+        internal void AddNode(int data)
         {
             Node node = new Node(data);
             if (head == null)
             {
-                head = node;
+                this.head = node;
             }
             else
             {
-                Node temp = head;
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
+                Node temp = node;
+                temp.next = head;
+                head = temp;
             }
-            Console.WriteLine(node.data + " inserted into linked list");
         }
         internal void Display()
         {
