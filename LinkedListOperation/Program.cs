@@ -18,6 +18,10 @@ namespace LinkedListOperation
             list.Display();
             list.RemoveLastElement();
             list.Display();
+            list.AppendNode(70);
+            list.AppendNode(56);
+            list.Search(70);
+            list.Display();
         }
     }
 }

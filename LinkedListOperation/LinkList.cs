@@ -101,5 +101,17 @@ namespace LinkedListOperation
             NewNode.next = null;
             return head;
         }
+        internal Node Search(int value)
+        {
+            while (this.head != null)
+            {
+                if(this.head.data == value)
+                {
+                    return this.head;
+                }
+                head = head.next;               
+            }
+            return null;
+        }
     }
 }
