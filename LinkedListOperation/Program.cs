@@ -16,6 +16,8 @@ namespace LinkedListOperation
             list.Display();
             list.RemoveFirstElement();
             list.Display();
+            list.RemoveLastElement();
+            list.Display();
         }
     }
 }
