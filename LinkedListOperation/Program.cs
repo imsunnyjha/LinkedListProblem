@@ -9,9 +9,9 @@ namespace LinkedListOperation
             Console.WriteLine("Welcome to Linked List Implementation!");
 
             LinkList list = new LinkList();
-            list.AddNode(70);
-            list.AddNode(30);
-            list.AddNode(56);
+            list.AppendNode(70);
+            list.AppendNode(30);
+            list.AppendNode(56);
             list.Display();
         }
     }
